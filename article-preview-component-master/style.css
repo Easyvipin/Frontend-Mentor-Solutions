@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --textFamily: "Manrope", sans-serif;
+  --vdgb: hsl(217, 19%, 35%);
+  --ddb: hsl(214, 17%, 51%);
+  --gb: hsl(212, 23%, 69%);
+  --lgb: hsl(210, 46%, 95%);
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--lgb);
+  font-family: var(--textFamily);
+}
+
+section {
+  display: flex;
+  position: relative;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px var(--gb);
+}
+.section-img {
+  padding: 0px;
+  width: 100%;
+  min-height: 280px;
+  background-image: url(./images/drawers.jpg);
+  background-size: 420px 354px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article-footer {
+  display: flex;
+  height: 70px;
+  align-items: center;
+}
+.prof-img {
+  width: 40px;
+  height: 35px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.desc {
+  padding: 1rem 2rem;
+  background: white;
+}
+
+.head {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--vdgb);
+}
+.sub-head {
+  font-size: 12px;
+  color: var(--gb);
+  font-weight: 700;
+}
+
+.author {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+h3 {
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  color: var(--vdgb);
+  font-weight: 700;
+}
+h4 {
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  color: var(--gb);
+}
+
+.share {
+  padding: 4px 8px;
+  border-radius: 50%;
+  background: var(--lgb);
+}
+.share-img {
+  width: 14px;
+}
+.Social-pop {
+  display: none;
+  position: absolute;
+  background-color: var(--vdgb);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 170px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  top: -50px;
+  right: -28%;
+}
+
+.social-icon {
+  margin-left: 12px;
+}
+.triangle {
+  position: absolute;
+  content: "";
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  background-color: var(--vdgb);
+  height: 10px;
+  width: 20px;
+  bottom: -10px;
+  left: 45%;
+}
+span {
+  color: var(--gb);
+  box-sizing: border-box;
+  font-family: var(--textFamily);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 460px) {
+  body {
+    height: 100vh;
+  }
+  section {
+    flex-direction: column;
+    width: 90%;
+    border: 2px solid black;
+  }
+  .Social-pop {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    top: 80%;
+    right: 0;
+  }
+  .triangle {
+    display: none;
+  }
+}
